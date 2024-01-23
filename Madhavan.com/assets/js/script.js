@@ -176,3 +176,39 @@ button.onclick = function() {
     } else
         mySong.pause();
 }
+
+
+// Contact
+
+document.addEventListener('DOMContentLoaded', function () {
+    var form = document.forms['contact'];
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Get form data
+        var formData = new FormData(form);
+
+        // Send data to Google Apps Script using Fetch API
+        fetch('https://script.google.com/macros/s/AKfycbyiA3BGMgHl6UZ0PX0j6fAWWRhW-xU0y-OYGJtVfp0cKUEQnKdFLFu6ribiLgzzioKi/exec', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                // Handle success
+                if (data.status === 'success') {
+                    // Clear form fields
+                    form.reset();
+                    
+                    // Display success message
+                    alert('Message sent successfully!');
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                // Handle error (if needed)
+            });
+    });
+});
