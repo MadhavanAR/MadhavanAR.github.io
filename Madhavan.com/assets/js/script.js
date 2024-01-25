@@ -212,3 +212,32 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     });
 });
+
+
+// JavaScript to handle scrolling and button visibility
+
+document.addEventListener('DOMContentLoaded', function () {
+    var scrollButton = document.querySelector('.scroll-to-top-btn');
+  
+    // Show or hide the button based on scroll position
+    function handleScroll() {
+      if (window.scrollY > 100) {
+        scrollButton.classList.add('show');
+      } else {
+        scrollButton.classList.remove('show');
+      }
+    }
+  
+    // Smooth scroll to top with adjustable duration
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+        duration: 200, // Adjust the duration (in milliseconds) as needed
+      });
+    }
+  
+    // Attach event listeners
+    window.addEventListener('scroll', handleScroll);
+    scrollButton.addEventListener('click', scrollToTop);
+  });
