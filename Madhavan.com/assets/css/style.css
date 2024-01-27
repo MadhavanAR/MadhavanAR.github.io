@@ -1894,3 +1894,17 @@ textarea.form-input::-webkit-resizer {
       display: none;
     }
   }
+
+/*label*/
+
+.label {
+    /* Add your styling for the labels here */
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    margin-right: 5px; /* Add margin to the right of each label */
+    margin-top: 10px;
+    border-radius: 5px;
+    display: inline-block; /* Use "inline-block" to make labels appear side by side */
+    font-size:13px;
+}
