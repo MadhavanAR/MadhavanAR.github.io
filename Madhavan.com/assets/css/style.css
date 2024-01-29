@@ -1908,3 +1908,50 @@ textarea.form-input::-webkit-resizer {
     display: inline-block; /* Use "inline-block" to make labels appear side by side */
     font-size:13px;
 }
+
+.timeline-text {
+    color: var(--light-gray);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-300);
+    line-height: 1.6;
+}
+.project-description{
+    color: var(--light-gray-70);
+}
+
+.source-btn {
+    visibility: inherit;
+    margin: 0;
+    box-sizing: border-box;
+    font: inherit;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    color: hsl(45, 100%, 72%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 20px;
+    border-radius: 14px;
+    font-size: 14px; /* Change this to your desired font size */
+    text-transform: capitalize;
+    box-shadow: 0 16px 40px hsla(0, 0%, 0%, 0.25);
+    z-index: 1;
+    transition: 0.25s ease; /* You may adjust the transition duration */
+}
+
+.source-btn:hover {
+    background: linear-gradient(to bottom right, hsla(240, 1%, 18%, 0.251) 0%, hsla(240, 2%, 11%, 0) 100%), hsl(240, 2%, 13%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: 0 25px 50px hsla(0, 0%, 0%, 0.15);
+}
+
+.webdev{
+    color:var(--light-gray-70);
+}
